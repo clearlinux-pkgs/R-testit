@@ -1,5 +1,5 @@
 PKG_NAME := R-testit
-URL = https://cran.r-project.org/src/contrib/testit_0.8.tar.gz
+URL = https://cran.r-project.org/src/contrib/testit_0.9.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
