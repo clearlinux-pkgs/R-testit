@@ -4,7 +4,7 @@
 #
 Name     : R-testit
 Version  : 0.9
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/testit_0.9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/testit_0.9.tar.gz
 Summary  : A Simple Package for Testing R Packages
@@ -26,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549272882
+export SOURCE_DATE_EPOCH=1552801501
 
 %install
-export SOURCE_DATE_EPOCH=1549272882
+export SOURCE_DATE_EPOCH=1552801501
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -65,8 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library testit|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  testit || :
 
 
 %files
@@ -92,3 +91,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/testit/html/00Index.html
 /usr/lib64/R/library/testit/html/R.css
 /usr/lib64/R/library/testit/rstudio/addins.dcf
+/usr/lib64/R/library/testit/tests/test-all.R
+/usr/lib64/R/library/testit/tests/test-error/test-error.R
+/usr/lib64/R/library/testit/tests/testit/test-assert.R
+/usr/lib64/R/library/testit/tests/testit/test-utils.R
