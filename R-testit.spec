@@ -4,7 +4,7 @@
 #
 Name     : R-testit
 Version  : 0.11
-Release  : 59
+Release  : 60
 URL      : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
 Summary  : Provides two convenience functions assert() and test_pkg() to facilitate testing R packages.
