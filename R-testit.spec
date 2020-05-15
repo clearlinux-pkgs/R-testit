@@ -4,37 +4,35 @@
 #
 Name     : R-testit
 Version  : 0.11
-Release  : 61
+Release  : 62
 URL      : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
-Summary  : Provides two convenience functions assert() and test_pkg() to facilitate testing R packages.
+Summary  : A Simple Package for Testing R Packages
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 BuildRequires : buildreq-R
 
 %description
-# testit
-[![Build Status](https://travis-ci.org/yihui/testit.svg)](https://travis-ci.org/yihui/testit)
-[![Coverage Status](https://coveralls.io/repos/github/yihui/testit/badge.svg?branch=master)](https://coveralls.io/github/yihui/testit?branch=master)
-[![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/testit)](https://cran.r-project.org/package=testit)
+facilitate testing R packages.
 
 %prep
 %setup -q -c -n testit
+cd %{_builddir}/testit
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573583804
+export SOURCE_DATE_EPOCH=1589558189
 
 %install
-export SOURCE_DATE_EPOCH=1573583804
+export SOURCE_DATE_EPOCH=1589558189
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
