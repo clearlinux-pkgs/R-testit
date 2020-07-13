@@ -4,7 +4,7 @@
 #
 Name     : R-testit
 Version  : 0.11
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/testit_0.11.tar.gz
 Summary  : A Simple Package for Testing R Packages
